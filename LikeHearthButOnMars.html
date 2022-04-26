@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Nikki Norberg: Like Earth but on Mars</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Home</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="AboutMe.html">About Me</a></li>
+								<li><a href="Browse.html">Catalog</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Like Earth but on Mars: Small game project</h2>
+								<p>The first game created in our very own Direct X 11 game engine. <a href="https://youtu.be/7ZuVRu1MexY">Link to game play video</a>.</p></p>
+							</div>
+						</header>
+
+                <!-- Content -->
+                <div class="wrapper">
+                    <div class="inner">
+
+                        <h3 class="major">Like Earth but on Mars: What is there to know?</h3>
+                        <p><span class="image left"><img src="images/T-Lux.png" alt="" /></span> Yeah so, obviously we could not come to an agreement on one name. Both just tingled joy in all of us! After a couple of meetings we at least came to an agreement 
+                        to make a cute game with fun and happy colors, but once the player starts the game the happyness is wiped away and replaced by bitterness by dark lighting and sad soundeffects.  </p>
+                        <p><span class="image right"><img src="images/T-Monster.png" alt="" /></span> The game is about a traveling austronout that was supposed to deliver supplise but as he gets closer to his detination, Mars, no one responds to his landing request. 
+                         </p>
+                        <p><span class="image left"><img src="images/T-Person.png" alt="" /></span> The ship he was on haywires and crashes at the corner of the colonie and an important part of the ship is thrown into the city for the austronout to retrive. 
+                            He soon notices upon crawling out of his ship that no one is around to help, and the darkness begins to crawl under the poor astronaut's skin.  
+                         Soon, a tiny flying creature extracting a bright light makes its way to greet our traveler. With the help of this new friend, our traveler can make his way through the darkness, 
+                         scaring away the creatures of the shadows and solving the puzzles an uninhabited town may present. </p>
+                        <p> In short, as the player, you use the mouse to move around your light friend. The light friend, that we have chosen to call Lux, can make its way through windows and over fences that the player can not.
+                            Lux also scares away monsters, making them move away from the light. This can be used to make monsters walk on top of pressure plates, opening doors and gates. The player plays as the astronaut, walking around in an orderly fashion with W,A,S,D.
+                        Our traveler is scared of the dark, meaning Lux needs to be a set range of him for him not to be scared and slowly be suffocated by fear. He does not die from the absence of light, but his movement speed starts to slow down, and at last, he can't move  
+                    until Lux is back at his side. If a monster were to get to the player, he dies instantly. There are no checkpoints, but the level is short enough to be passed in about ten minutes if the player does not get stuck on any of the puzzles for too long. 
+                At the end of the level, the player may find the core. The core is the key to fixing the ship and getting away from this planet as fast as possible. Luckily the astronaut has not only gone through years of education to travel space but also has a degree as a mechanic!  </p>
+                        <h3 class="major">All the stuff</h3>
+                            <h4>The Map</h4>
+                            <div class="box alt">
+                                <div class="row gtr-uniform">
+                                    <div class="col-12"><span class="image fit"><img src="images/Level conceptRitning.png" alt="" /></span></div>
+                                    <p> Sure, not the most ascetically pleasing level of concept art ever made in the history of the earth, but it does what it should! 
+                                        This piece of messy lines in different colors gave the team a uniform mental image of the size of things as well as where to place things like pressure plates, doors, the puzzle areas, floor levels and monsters among other fun stuff.
+                                        Some of the mechanics in this drawing had to be scrapped or replaced with methods already developed earlier in the process as time ran out.
+                                        The player makes their way through the level with start at the big zero at the lower left by the little spaceship!</p>
+                                    <div class="col-12"><span class="image fit"><img src="images/BigLevelTinyMap.png" alt="" /></span></div>
+                                    <p> As the level was built on a grid to make pathfinding using A-Star easier to implement I came up with the idea of creating a small texture of 256 x 256 pixels that would represent each node in the A-Star system.
+                                        The image tells the nodes at what heights the node should be spawned. The black represents the node not being spawned at all. Doing it this way helped me create the path on which the players and monsters travel on with exact accuracy 
+                                        (every pixel represents one unit in length both in Maya and our game engine)
+                                        and helping us skip all kinds of collision detection as players and monsters may only walk on the path!
+                                        The colored dots represent where to spawn monsters, lights, pressure plates and lights. 
+                                        This method was later used again in the big game project to create nodes.  </p>
+                                    <div class="col-12"><span class="image fit"><img src="images/FlatRenderSceneWire.png" alt="" /></span></div>
+                                    <p>The map is seen from a locked camera angle and in an orthographic fashion. Our original thought was to create a method of making objects disappear in the way of the character and the camera, but once again, we did not have
+                                        time for this so I decided on "cutting holes" in the geometry of the buildings, making way for the camera to see the character where he would be fully covered otherwise. 
+                                        I was a bit too lazy to find the exact camera angle in which the cuts line perfectly for these shots (i have it written down somewhere), but i'm sure you get the idea.
+                                         This level came to a total triangle count of 113 453 triangles.</p>
+                                    <div class="col-12"><span class="image fit"><img src="images/FlatRenderScene.png" alt="" /></span></div>
+                                    <p> - Maya viewport 2.0 render. 
+
+                                    </p><p>Shadow mapping was a no go as we did not have time and the original idea of shading was for us to use toon shading.
+                                        In the end, we did not manage to create a working toon shader so I decided on doing the toon shading directly in the texture instead. </p>
+                                    
+
+                                </div>
+                            </div>
+                        
+                            <h4>The characters</h4>
+                            <div class="box alt">
+                                <div class="row gtr-uniform">
+                                    <div class="col-12"><span class="image fit"><img src="images/Colored_Character_Animation.png" alt="" /></span></div>
+                                    <div class="col-12"><span class="image fit"><img src="images/Colored_Monster_Animation.png" alt="" /></span></div>
+                                    <p>We thought it would be fun to use sprites as characters instead of 3D characters for this project. For some reason mirroring sprites in our game engine proved to mess a lot of things up, 
+                                        that's why I made mirrored ones as well in the sprite sheets. Each sprite is 512 x 512 pixels. This proved to be a bit messy with the body of the monster being much smaller as the arms stretch and take up most of the 
+                                    sprite area but as programmers, we do as programmers do and throw some code at it instead! (We just scaled it up) </p>
+
+                                </div>
+                            </div>
+
+                            <h4>The graphic</h4>
+                            <div class="box alt">
+                                <div class="row gtr-uniform">
+                                    <div class="col-12"><span class="image fit"><img src="images/StartScreenLP.png" alt="" /></span></div>
+                                    <div class="col-12"><span class="image fit"><img src="images/LillaSpel-ColorPalette.png" alt="" /></span></div>
+
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+
+                </section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
